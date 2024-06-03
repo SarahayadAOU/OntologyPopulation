@@ -1,0 +1,137 @@
+pip install rdflib pandas
+Load the OWL File
+Query the OWL File to Extract Entities
+Convert Results to CSV
+import pandas as pd
+from rdflib import Graph, URIRef
+
+# Load your graph if not already loaded
+g = Graph()
+g.parse(r"C:\Users\ayads\OneDrive\Documents\Sarah\Research\Asbestos\AsbestosontologybySarah.rdf", format="xml")
+
+# Assuming 'entities' comes from a SPARQL query, and you extract it properly
+query = """
+SELECT DISTINCT ?entity
+WHERE {
+    { ?entity a owl:Class . }
+    UNION
+    { ?s rdf:type ?entity . }
+}
+"""
+results = g.query(query)
+
+# Extracting just the entity name from each URI returned by the query
+entity_names = [str(result['entity'].split('#')[-1]) if isinstance(result['entity'], URIRef) else None for result in results]
+
+# Convert query results to a DataFrame, setting each entity name as a column
+df = pd.DataFrame([entity_names], columns=entity_names)
+
+# Save DataFrame to CSV
+df.to_csv('entities.csv', index=False)
+
+Entities and their instances
+# Prepare a dictionary to hold entities and their instances
+entity_instances = {}
+
+# Fetch entities
+entities_query = """
+SELECT DISTINCT ?class
+WHERE {
+    { ?class a owl:Class . }
+    FILTER (!isBlank(?class))
+}
+"""
+entities_results = g.query(entities_query)
+
+# For each entity, fetch its instances
+for result in entities_results:
+    entity = str(result['class'].split('#')[-1])  # Extract the entity name
+    instances_query = f"""
+    SELECT DISTINCT ?instance
+    WHERE {{
+        ?instance rdf:type <{result['class']}> .
+    }}
+    """
+    instances_results = g.query(instances_query)
+    # Store each instance's URI or a label if available
+    instances = [str(inst['instance'].split('#')[-1]) for inst in instances_results]
+    entity_instances[entity] = instances
+
+# Convert the dictionary to a DataFrame where each entity is a column
+df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in entity_instances.items()]))
+
+# Save the DataFrame to a CSV file
+df.to_csv('entity_instances.csv', index=False)
+
+# Function to fetch all properties of an instance
+def fetch_properties(instance_uri):
+    query = f"""
+    SELECT ?property ?value
+    WHERE {{
+        <{instance_uri}> ?property ?value .
+        FILTER (?property != rdf:type)  # Exclude rdf:type properties
+    }}
+    """
+    return g.query(query)
+
+# Fetch all classes (entities)
+entities_query = """
+SELECT DISTINCT ?class
+WHERE {
+    ?class a owl:Class .
+    FILTER (!isBlank(?class))
+}
+"""
+entities_results = g.query(entities_query)
+
+# Initialize a list to store data for all instances
+instances_data = []
+
+# Process each entity to get its instances and their properties
+for entity_result in entities_results:
+    class_uri = entity_result['class']
+    entity = str(class_uri.split('#')[-1])  # Extract the entity name
+    
+    # Query to fetch instances of the current entity
+    instances_query = f"""
+    SELECT DISTINCT ?instance
+    WHERE {{
+        ?instance rdf:type <{class_uri}> .
+    }}
+    """
+    instances_results = g.query(instances_query)
+    
+    # Process each instance of the current entity
+    for instance in instances_results:
+        instance_uri = instance['instance']
+        properties = fetch_properties(instance_uri)
+        
+        # Dictionary to hold the instance data
+        instance_data = {'Entity': entity, 'Instance': str(instance_uri.split('#')[-1])}
+        
+        # Add property values to the instance data dictionary
+        for prop in properties:
+            prop_name = str(prop['property'].split('#')[-1])
+            # Determine how to handle the value based on its type
+            if isinstance(prop['value'], URIRef):
+                prop_value = str(prop['value'].split('#')[-1])
+            elif isinstance(prop['value'], Literal):
+                prop_value = str(prop['value'])
+            else:
+                prop_value = str(prop['value'])
+            
+            instance_data[prop_name] = prop_value
+        
+        # Append the prepared data dictionary to the list
+        instances_data.append(instance_data)
+
+# Convert the list to a DataFrame
+df = pd.DataFrame(instances_data)
+
+# Organize DataFrame: setting entities and instances under their respective entities as columns
+# Ensuring every instance has its entity marked properly
+df = df.pivot_table(index=['Entity', 'Instance'], aggfunc=lambda x: ' '.join(str(v) for v in x))
+
+# Save the DataFrame to a CSV file
+df.to_csv('combined_entity_instance_properties.csv', index=True)
+
