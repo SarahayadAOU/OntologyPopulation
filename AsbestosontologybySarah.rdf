@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70/"
+     xml:base="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-70="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Extracted_From -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Extracted_From">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Source_Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Component -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Component">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Product">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Structure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Structure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Document_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Document_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Source_Document"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product_Component -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product_Component">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Room_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Room_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Asbestos_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Asbestos_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Building_Code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Building_Code">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Building_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Building_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Component_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Component_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Construction_Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Construction_Year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Department_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Department_Number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Owner_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Owner_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Postal_Code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Postal_Code">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Product_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Product_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Reference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Reference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Source_Document"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Region -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Region">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Registration_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Registration_Number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Structure_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Structure_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#has_Year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#heating_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#heating_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#year_into_Service -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#year_into_Service">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Source_Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Source_Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Bandes_calicot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Bandes_calicot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+        <untitled-ontology-70:has_Component rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cloisons_sèches"/>
+        <untitled-ontology-70:has_Structure rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Parois_verticales_intérieures"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cloisons_sèches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cloisons_sèches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+        <untitled-ontology-70:has_Product rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Bandes_calicot"/>
+        <untitled-ontology-70:has_Structure rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cloisons_sèches"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cuisine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+        <untitled-ontology-70:has_Product rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Placopatre"/>
+        <untitled-ontology-70:has_Structure rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Murs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Dalles_De_Sol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Dalles_De_Sol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+        <untitled-ontology-70:has_Structure rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Planchers_et_planchers_techniques"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Enduits_de_ragréage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Enduits_de_ragréage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Equipements_divers_et_accessories -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Equipements_divers_et_accessories">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+        <untitled-ontology-70:has_Component rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Cloisons_sèches"/>
+        <untitled-ontology-70:has_Component rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Eviers_métalliques"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Eviers_métalliques -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Eviers_métalliques">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Murs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Murs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Parois_verticales_intérieures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Parois_verticales_intérieures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+        <untitled-ontology-70:has_Product rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Bandes_calicot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Placopatre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Placopatre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Planchers_et_planchers_techniques -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Planchers_et_planchers_techniques">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Structure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Plaques_souples_antivibratiles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Plaques_souples_antivibratiles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Revêtements_de_sols -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Revêtements_de_sols">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Component"/>
+        <untitled-ontology-70:has_Product rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Dalles_De_Sol"/>
+        <untitled-ontology-70:has_Structure rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Planchers_et_planchers_techniques"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#106201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#106201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Building"/>
+        <untitled-ontology-70:has_Component rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Eviers_métalliques"/>
+        <untitled-ontology-70:has_Product rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Plaques_souples_antivibratiles"/>
+        <untitled-ontology-70:has_Structure rdf:resource="http://www.semanticweb.org/ayads/ontologies/2024/5/untitled-ontology-70#Equipements_divers_et_accessories"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
